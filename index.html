@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parallax Scrolling Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio  autoplay loop >
+        <source src ="music.mp3.mp3">
+    </audio>
+    
+<header>
+    <a href="#" class="logo">logo</a>
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</header>
+<section>
+    <img src="stars.png" id="stars">
+    <img src="moon.png" id="moon">
+    <img src="mountains_behind.png" id="mountains_behind">
+    <h2 id="text">Moon light</h2>
+    <a href="#sec" id="btn">Explore</a>
+    <img src="mountains_front.png" id="mountains_front">
+
+</section>
+<div class="sec" id="sec">
+    <h2>Parallax Scrolling Effects</h2>
+    <p><br>The term "parallax" refers to the apparent displacement or difference in the apparent position of an object viewed along two different lines of sight. In other words, it's the effect by which the position of an object seems to change when it is looked at from different angles or positions.
+
+        Imagine you're on a train, and you look out the window at a tree passing by. If you look at the tree from one window, it might appear to be in front of a certain building. But if you move to another window and look at the tree again, it might appear to be in front of a different building. That's an example of parallax!
+        
+        Parallax is commonly used in astronomy to measure the distances to nearby stars. By observing the apparent shift of a star's position against the background of more distant stars when viewed from opposite sides of the Earth's orbit, astronomers can calculate the distance to the star.</br>
+    <br>Parallax scrolling is a technique used in web design and animation where the background and foreground elements of a webpage or animation move at different speeds, creating a sense of depth and dimensionality.
+
+    In traditional scrolling, all elements on a webpage move at the same speed, giving a flat, two-dimensional appearance. Parallax scrolling, on the other hand, creates a layered effect by moving the background elements (such as images or textures) at a slower speed than the foreground elements (such as text or images). This creates a sense of distance and depth, making the webpage or animation feel more immersive and engaging.</br>
+    <br>Parallax scrolling is a captivating technique used in web design and animation that adds a new dimension to the user experience. By cleverly manipulating the movement of background and foreground elements, parallax scrolling creates a sense of depth and dimensionality, drawing the user into a more immersive and engaging environment. In traditional scrolling, all elements on a webpage move at the same speed, resulting in a flat, two-dimensional appearance that can feel static and uninteresting. In contrast, parallax scrolling introduces a sense of dynamism and visual interest by moving the background elements, such as images or textures, at a slower speed than the foreground elements, like text or images. This clever manipulation of speed and movement creates a layered effect, where the background appears to be farther away, while the foreground elements seem closer and more prominent.
+
+    <br></br>As the user scrolls through the webpage or animation, the parallax effect creates a sense of movement and energy, as if the different elements are interacting with each other in a three-dimensional space. This can be particularly effective in storytelling, where the parallax effect can be used to guide the user's attention, create suspense, or convey a sense of progression. Moreover, parallax scrolling can be used to add visual interest to otherwise static content, making it a powerful tool in the hands of web designers and animators. By cleverly combining parallax scrolling with other visual effects, such as animations, transitions, and responsive design, creators can craft a truly unforgettable user experience that leaves a lasting impression.</p>
+</div>
+<script>
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('mountains_behind');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let mountains_front = document.getElementById('mountains_front');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll',function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0.5 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+        top.style.marginRight = value * 1.5 + 'px';
+        bnt.style.marginRight = value * 1.5 + 'px';
+        header.style.yop = value * 0.5 + 'px';
+
+
+
+    })
+
+</script>
+</body>
+</html>
